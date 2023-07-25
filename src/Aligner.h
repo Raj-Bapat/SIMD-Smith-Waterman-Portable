@@ -23,14 +23,11 @@ class Aligner {
     public:
         
     Aligner(void);
-    Aligner(const int& match_score, const int& mismatch_penalty, const int& gap_opening_penalty, const int& gap_extending_penalty);
-    Alignment Align(std::string &target, std::string &query, const int&version);
-    Alignment sw1(std::string &target, std::string &query);
-    Alignment sw2(std::string &target, std::string &query);
-    Alignment sw3(std::string &target, std::string &query);
-    Alignment sw4(std::string &target, std::string &query);
-    
-    private:
+    Aligner(const int& match_score, const int& mismatch_penalty, const int& gap_opening_penalty, const int& gap_extending_penalty) : match_score_(match_score), mismatch_penalty_(mismatch_penalty), gap_opening_penalty_(gap_opening_penalty), gap_extending_penalty_(gap_extending_penalty) {}
+    static Aligner* makeAligner(int version, const int& match_score, const int& mismatch_penalty, const int& gap_opening_penalty, const int& gap_extending_penalty);
+    virtual Alignment Align(std::string &target, std::string &query) = 0;
+
+    protected:
 
     int match_score_;
     int mismatch_penalty_;

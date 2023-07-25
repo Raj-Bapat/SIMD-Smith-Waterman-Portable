@@ -5,7 +5,25 @@
 #include <cmath>
 #include <iomanip>
 #include <unistd.h>
+#include "Aligner.h"
+#include "sw1.h"
+#include "sw2.h"
+#include "sw3.h"
+#include "sw4.h"
 using namespace std;
+
+Aligner* Aligner::makeAligner(int version, const int& match_score, const int& mismatch_penalty, const int& gap_opening_penalty, const int& gap_extending_penalty) {
+    if (version == 1) {
+        return new sw1(match_score, mismatch_penalty, gap_opening_penalty, gap_extending_penalty);
+    } else if (version == 2) {
+        return new sw2(match_score, mismatch_penalty, gap_opening_penalty, gap_extending_penalty);
+    } else if (version == 3) {
+        return new sw3(match_score, mismatch_penalty, gap_opening_penalty, gap_extending_penalty);
+    } else {
+        return new sw4(match_score, mismatch_penalty, gap_opening_penalty, gap_extending_penalty);
+    }
+
+}
 
 /*
     -m N	N is a positive integer for weight match in genome sequence alignment. [default: 2]
