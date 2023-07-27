@@ -65,4 +65,8 @@ int main(int argc, char * const argv[]) {
     fin.open(argv[optind + 1]);
     fin >> query;
     fin.close();
+    Aligner* ssw_aligner = Aligner::makeAligner(version, match, mismatch, gap_open, gap_extension);
+    Alignment ans = ssw_aligner->Align(target, query);
+    cout << ans.sw_score << "\n";
+    return 0;
 }

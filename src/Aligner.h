@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <limits>
 
 struct Alignment {
     int version;            // The version of aligner we want to use         
@@ -17,6 +18,7 @@ struct Alignment {
     int  ref_end_next_best;  // Reference end position of the next best alignment
     int  mismatches;         // Number of mismatches of the alignment
     std::string cigar_string;    // Cigar string of the best alignment
+    std::vector<uint32_t> cigar; // Cigar stored in the BAM format
 };
 
 class Aligner {
