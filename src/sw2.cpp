@@ -29,11 +29,11 @@ Alignment sw2::Align(std::string &target, std::string &query) {
     // CHRIS'S CODE USES AVX256 WHICH IS NOT STANDARD
 
     for (int d = 1; d<=l1+l2-1; d++) {
-        int i = max(1, d-l2+1);
-        int j = d-i+1;
-        int ie = min(d, l1);
-        int je = d-ie+1;
-        while (i <= l1 && j >= 1) {
+        int i = max(1, d-l2+1)+4;
+        int j = d-i+1+4;
+        int ie = min(d, l1)+4;
+        int je = d-ie+1+4;
+        while (i <= l1+4 && j >= 1+4) {
             int weight = (target[i-1] == query[j-1]) ? match_score_ : -mismatch_penalty_;
             P[i][j] = max(P[i][j], D[i-1][j]-gap_opening_penalty_);
             P[i][j] = max(P[i][j], P[i-1][j]-gap_extending_penalty_);
