@@ -34,7 +34,7 @@ Aligner* Aligner::makeAligner(int version, const int& match_score, const int& mi
 */
 
 int main(int argc, char * const argv[]) {
-    clock_t start, end;
+    clock_t cpu_clock;
     double cpu_time;
     string target, query;
     int version = 1, match = 2, mismatch = 2, gap_open = 3, gap_extension = 1;
@@ -66,7 +66,10 @@ int main(int argc, char * const argv[]) {
     fin >> query;
     fin.close();
     Aligner* ssw_aligner = Aligner::makeAligner(version, match, mismatch, gap_open, gap_extension);
+    cpu_clock = clock();
     Alignment ans = ssw_aligner->Align(target, query);
+    cpu_time = clock()-cpu_clock;
     cout << ans.sw_score << "\n";
+    cout << "time: " << (float)cpu_time/CLOCKS_PER_SEC << " seconds" << "\n";
     return 0;
 }
