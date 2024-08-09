@@ -4,7 +4,7 @@ main.o: main.cpp Aligner.h sw1.h sw2.h sw3.h sw4.h
 	g++ -g -c main.cpp
 sw1.o: sw1.cpp sw1.h Aligner.h
 	g++ -g -c sw1.cpp
-sw2.o: sw2.cpp sw2.h Aligner.h
+sw2.o: sw2.cpp sw2.h Aligner.h highway-1.2.0/hwy/highway.h
 	g++ -mavx2 -g -c sw2.cpp
 sw3.o: sw3.cpp sw3.h Aligner.h
 	g++ -g -c sw3.cpp
