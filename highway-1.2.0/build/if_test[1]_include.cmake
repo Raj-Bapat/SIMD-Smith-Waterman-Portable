@@ -1,0 +1,5 @@
+if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/if_test[1]_tests.cmake")
+  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/if_test[1]_tests.cmake")
+else()
+  add_test(if_test_NOT_BUILT if_test_NOT_BUILT)
+endif()

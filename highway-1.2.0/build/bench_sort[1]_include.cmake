@@ -1,0 +1,5 @@
+if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/bench_sort[1]_tests.cmake")
+  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/bench_sort[1]_tests.cmake")
+else()
+  add_test(bench_sort_NOT_BUILT bench_sort_NOT_BUILT)
+endif()

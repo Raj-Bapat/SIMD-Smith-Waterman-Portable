@@ -1,0 +1,5 @@
+add_test( TopologyTest.TestNum /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/tests/topology_test [==[--gtest_filter=TopologyTest.TestNum]==] --gtest_also_run_disabled_tests)
+set_tests_properties( TopologyTest.TestNum PROPERTIES WORKING_DIRECTORY /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test( TopologyTest.TestTopology /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/tests/topology_test [==[--gtest_filter=TopologyTest.TestTopology]==] --gtest_also_run_disabled_tests)
+set_tests_properties( TopologyTest.TestTopology PROPERTIES WORKING_DIRECTORY /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set( topology_test_TESTS TopologyTest.TestNum TopologyTest.TestTopology)
