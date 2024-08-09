@@ -1,5 +1,0 @@
-if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/random_test[1]_tests.cmake")
-  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/random_test[1]_tests.cmake")
-else()
-  add_test(random_test_NOT_BUILT random_test_NOT_BUILT)
-endif()

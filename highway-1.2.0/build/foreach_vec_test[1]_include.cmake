@@ -1,5 +1,0 @@
-if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/foreach_vec_test[1]_tests.cmake")
-  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/foreach_vec_test[1]_tests.cmake")
-else()
-  add_test(foreach_vec_test_NOT_BUILT foreach_vec_test_NOT_BUILT)
-endif()

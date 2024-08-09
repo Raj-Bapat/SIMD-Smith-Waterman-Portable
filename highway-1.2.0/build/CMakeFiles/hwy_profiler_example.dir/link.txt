@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -fPIE -pie CMakeFiles/hwy_profiler_example.dir/hwy/examples/profiler_example.cc.o -o examples/hwy_profiler_example  libhwy.a 

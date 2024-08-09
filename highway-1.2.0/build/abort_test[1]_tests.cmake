@@ -1,7 +1,0 @@
-add_test( AbortDeathTest.AbortDefault /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/tests/abort_test [==[--gtest_filter=AbortDeathTest.AbortDefault]==] --gtest_also_run_disabled_tests)
-set_tests_properties( AbortDeathTest.AbortDefault PROPERTIES WORKING_DIRECTORY /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test( AbortDeathTest.AbortOverride /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/tests/abort_test [==[--gtest_filter=AbortDeathTest.AbortOverride]==] --gtest_also_run_disabled_tests)
-set_tests_properties( AbortDeathTest.AbortOverride PROPERTIES WORKING_DIRECTORY /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test( AbortTest.AbortOverrideChain /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/tests/abort_test [==[--gtest_filter=AbortTest.AbortOverrideChain]==] --gtest_also_run_disabled_tests)
-set_tests_properties( AbortTest.AbortOverrideChain PROPERTIES WORKING_DIRECTORY /home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set( abort_test_TESTS AbortDeathTest.AbortDefault AbortDeathTest.AbortOverride AbortTest.AbortOverrideChain)

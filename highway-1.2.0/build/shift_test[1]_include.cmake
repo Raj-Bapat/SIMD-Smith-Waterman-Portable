@@ -1,5 +1,0 @@
-if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/shift_test[1]_tests.cmake")
-  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/shift_test[1]_tests.cmake")
-else()
-  add_test(shift_test_NOT_BUILT shift_test_NOT_BUILT)
-endif()

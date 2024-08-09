@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -fPIE -pie CMakeFiles/hwy_benchmark.dir/hwy/examples/benchmark.cc.o -o examples/hwy_benchmark  libhwy.a 

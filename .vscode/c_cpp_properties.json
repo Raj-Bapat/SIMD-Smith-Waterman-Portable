@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/highway-1.2.0/"
+                "${workspaceFolder}/highway-1.2.0/hwy"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang-14",

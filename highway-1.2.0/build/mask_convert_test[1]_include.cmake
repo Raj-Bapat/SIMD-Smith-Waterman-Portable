@@ -1,5 +1,0 @@
-if(EXISTS "/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/mask_convert_test[1]_tests.cmake")
-  include("/home/rbapat/SIMD-Smith-Waterman/src/highway-1.2.0/build/mask_convert_test[1]_tests.cmake")
-else()
-  add_test(mask_convert_test_NOT_BUILT mask_convert_test_NOT_BUILT)
-endif()

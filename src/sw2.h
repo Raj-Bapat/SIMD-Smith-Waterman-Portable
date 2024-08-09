@@ -2,7 +2,7 @@
 #define SW2_H
 
 #include "Aligner.h"
-#include "/home/rbapat/SIMD-Smith-Waterman/highway-1.2.0/hwy/highway.h"
+// #include "/home/rbapat/SIMD-Smith-Waterman/highway-1.2.0/hwy/highway.h"
 
 class sw2: public Aligner {
     public:
