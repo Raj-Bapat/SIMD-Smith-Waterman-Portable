@@ -1,7 +1,5 @@
 {
     "files.associations": {
-        "iosfwd": "cpp",
-        "iostream": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
@@ -45,6 +43,8 @@
         "fstream": "cpp",
         "initializer_list": "cpp",
         "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "new": "cpp",
