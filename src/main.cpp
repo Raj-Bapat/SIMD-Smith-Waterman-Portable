@@ -70,6 +70,6 @@ int main(int argc, char * const argv[]) {
     Alignment ans = ssw_aligner->Align(target, query);
     cpu_time = clock()-cpu_clock;
     cout << ans.sw_score << "\n";
-    cout << "time: " << (float)cpu_time/CLOCKS_PER_SEC << " seconds" << "\n";
+    cout << "time: " << ((float)cpu_time/CLOCKS_PER_SEC)*1000 << " ms" << "\n";
     return 0;
 }
